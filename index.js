@@ -3,58 +3,70 @@
 // Kalian bisa membuat variabel lain untuk dimasukkan ke dalam atribut user agar lebih mudah dibaca
 
 //Monica
+const colorMonica = ["Yellow", "Pink", "White", "Purple"];
+const restoMonica = [
+  "Bento",
+  "Sushi",
+  "Pancake",
+  "Eggy",
+  "Tempura",
+  "Bento",
+  "Eggy",
+  "Padang",
+  "Tteok",
+  "Sushi",
+  "Sushi",
+];
+
+let setColorMonica = new Set(colorMonica);
+let setRestoMonica = new Set(restoMonica);
+
 const firstUser = {
   name: "Monica",
   gender: "Female",
   age: 17,
   email: "monica@dingdong.com",
-  favoriteColor: new Set(["Yellow", "Pink", "White", "Purple"]),
+  favoriteColor: [...setColorMonica],
   isHavePet: "Yes",
   education: [
-    ["name: SD 01", "city: Jakarta", "graduate: 2016"],
-    ["name: SMP 02", "city: Jakarta", "graduate: 2019"],
-    ["name: SMA 03", "city: Tangerang"],
+    { name: "SD 01", city: "Jakarta", graduate: "2016" },
+    { name: "SMP 02", city: "Jakarta", graduate: "2019" },
+    { name: "SMA 03", city: "Tangerang" },
   ],
-  favoriteRestaurant: new Set([
-    "Bento",
-    "Sushi",
-    "Pancake",
-    "Eggy",
-    "Tempura",
-    "Bento",
-    "Eggy",
-    "Padang",
-    "Tteok",
-    "Sushi",
-    "Sushi",
-  ]),
+  favoriteRestaurant: [...setRestoMonica],
 };
 
 //Wendy
+const colorWendy = ["Blue", "Black", "Grey"];
+const restoWendy = [
+  "Tempura",
+  "Bento",
+  "Sushi",
+  "Pancake",
+  "Padang",
+  "Katsu",
+  "Geprek",
+  "Pancake",
+  "Eggy",
+];
+
+let setColorWendy = new Set(colorWendy);
+let setRestoWendy = new Set(restoWendy);
+
 const secondUser = {
   name: "Wendy",
   gender: "Male",
   age: 23,
   email: "wendy@dingdong.com",
-  favoriteColor: new Set(["Blue", "Black", "Grey"]),
+  favoriteColor: [...setColorWendy],
   isHavePet: "No",
   education: [
-    ["name: SD 02", "city: Jakarta", "graduate: 2010"],
-    ["name: SMP 03", "city: Bogor", "graduate: 2013"],
-    ["name: SMA 01", "city: Surabaya", "graduate: 2016"],
-    ["name: Univesitas Maju", "city: Tanggerang"],
+    { name: "SD 02", city: "Jakarta", graduate: "2010" },
+    { name: "SMP 03", city: "Bogor", graduate: "2013" },
+    { name: "SMA 01", city: "Surabaya", graduate: "2016" },
+    { name: "Univesitas Maju", city: "Tanggerang" },
   ],
-  favoriteRestaurant: new Set([
-    "Tempura",
-    "Bento",
-    "Sushi",
-    "Pancake",
-    "Padang",
-    "Katsu",
-    "Geprek",
-    "Pancake",
-    "Eggy",
-  ]),
+  favoriteRestaurant: [...setRestoWendy],
 };
 
 // TODO: Masukkan hasil akhir dari kedua user di sini
